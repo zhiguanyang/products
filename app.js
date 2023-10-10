@@ -74,6 +74,8 @@ app.delete('/products/:id', async (req, res) => {
     res.redirect('/products')
 })
 
-app.listen(3000, () => {
-    console.log('App is listening on port 3000!')
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+    console.log(`servicing on port ${port}`)
 })
