@@ -29,6 +29,10 @@ app.use(methodOverride('_method'))
 
 const categories = ['fruit', 'vegetable', 'dairy']
 
+app.get('/', async (req, res) => {
+    res.redirect('/products')
+})
+
 app.get('/products', async (req, res) => {
     const { category } = req.query
     if (category) {
@@ -38,10 +42,6 @@ app.get('/products', async (req, res) => {
         const products = await Product.find({})
         res.render('products/index', { products, category: 'All' })
     }
-})
-
-app.post('/', async (req, res) => {
-    res.redirect('/products')
 })
 
 app.get('/products/new', (req, res) => {
