@@ -40,6 +40,10 @@ app.get('/products', async (req, res) => {
     }
 })
 
+app.post('/', async (req, res) => {
+    res.redirect('/products')
+})
+
 app.get('/products/new', (req, res) => {
     res.render('products/new', { categories })
 })
