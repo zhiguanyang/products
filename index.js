@@ -48,8 +48,8 @@ app.get('/products/new', (req, res) => {
     res.render('products/new', { categories })
 })
 
-app.get('/products/dataFile', (req, res) => {
-    res.render('products/dataFile.json')
+app.get('dataFile', (req, res) => {
+    res.send('dataFile.json')
 })
 
 app.post('/products', async (req, res) => {
