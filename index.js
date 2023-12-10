@@ -48,7 +48,7 @@ app.get('/products/new', (req, res) => {
     res.render('products/new', { categories })
 })
 
-app.get('dataFile', (req, res) => {
+app.get('/dataFile', (req, res) => {
     res.send('dataFile.json')
 })
 
