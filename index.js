@@ -49,7 +49,7 @@ app.get('/products/new', (req, res) => {
 })
 
 app.get('/data', (req, res) => {
-    res.render('dataFile.json')
+    res.render('products/dataFile.json')
 })
 
 app.post('/products', async (req, res) => {
