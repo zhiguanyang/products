@@ -48,10 +48,6 @@ app.get('/products/new', (req, res) => {
     res.render('products/new', { categories })
 })
 
-app.get('/data', (req, res) => {
-    res.render('products/dataFile.json')
-})
-
 app.post('/products', async (req, res) => {
     const newProduct = new Product(req.body)
     await newProduct.save()
