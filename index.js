@@ -49,7 +49,48 @@ app.get('/products/new', (req, res) => {
 })
 
 app.get('/dataFile', (req, res) => {
-    res.json('dataFile.json')
+    res.json({
+    "code": 1,
+    "message": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "XieXun",
+            "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/1.jpg",
+            "gender": 1,
+            "job": "Banzhuren",
+            "entrydate": "2008-05-09",
+            "updatetime": "2022-10-01 12:00:00"
+        },
+        {
+            "id": 2,
+            "name": "YinTianZhen",
+            "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/2.jpg",
+            "gender": 1,
+            "job": "Jiangshi",
+            "entrydate": "2012-05-09",
+            "updatetime": "2022-10-01 12:00:00"
+        },
+        {
+            "id": 3,
+            "name": "Weiyixiao",
+            "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/3.jpg",
+            "gender": 1,
+            "job": "Jiangshi",
+            "entrydate": "2020-05-09",
+            "updatetime": "2022-10-01 12:00:00"
+        },
+        {
+            "id": 4,
+            "name": "Daiqishi",
+            "image": "https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/4.jpg",
+            "gender": 2,
+            "job": "Jiangshi",
+            "entrydate": "2018-05-09",
+            "updatetime": "2022-10-01 12:00:00"
+        }
+    ]
+})
 })
 
 app.post('/products', async (req, res) => {
