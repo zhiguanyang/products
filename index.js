@@ -49,7 +49,7 @@ app.get('/products/new', (req, res) => {
 })
 
 app.get('/dataFile', (req, res) => {
-    res.send('dataFile.json')
+    res.json('dataFile.json')
 })
 
 app.post('/products', async (req, res) => {
